@@ -1,0 +1,169 @@
+.shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  background: #192b37;
+  color: #ffffff;
+  padding: 0 24px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar-left,
+.topbar-right,
+.topbar-logo,
+.user-badge,
+.breadcrumb,
+.tab-bar {
+  display: flex;
+  align-items: center;
+}
+
+.topbar-left,
+.topbar-right,
+.topbar-logo {
+  gap: 12px;
+}
+
+.endava-logo-topbar {
+  height: 22px;
+  width: auto;
+}
+
+.topbar-divider {
+  width: 1px;
+  height: 20px;
+  background: #5e6a73;
+}
+
+.topbar-section {
+  color: #babfc3;
+  font-size: 13px;
+}
+
+.user-badge {
+  gap: 8px;
+  background: #30404b;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ff5640;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.user-role {
+  font-size: 10px;
+  color: #babfc3;
+  text-transform: uppercase;
+}
+
+.btn-logout {
+  border: 1px solid #8c959b;
+  background: transparent;
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 12px;
+  padding: 6px 12px;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.page-header {
+  margin-bottom: 20px;
+}
+
+.page-header h1 {
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+
+.page-header p {
+  font-size: 14px;
+  color: #5e6a73;
+}
+
+.breadcrumb {
+  gap: 6px;
+  font-size: 12px;
+  color: #758087;
+  margin-bottom: 8px;
+}
+
+.breadcrumb span:last-child {
+  color: #192b37;
+  font-weight: 700;
+}
+
+.tab-bar {
+  gap: 4px;
+  border-bottom: 1px solid #d1d5d7;
+  margin-bottom: 16px;
+}
+
+.tab-btn {
+  border: none;
+  background: transparent;
+  color: #5e6a73;
+  font-size: 14px;
+  padding: 10px 14px;
+}
+
+.tab-btn.active {
+  color: #ff5640;
+  border-bottom: 2px solid #ff5640;
+}
+
+.tab-panel-hidden {
+  display: none;
+}
+
+.empty-state {
+  text-align: center;
+  color: #5e6a73;
+  padding: 28px 14px;
+}
+
+.section-sep {
+  height: 20px;
+}
+
+.app-footer {
+  height: 60px;
+  background: #192b37;
+  border-top: 1px solid #47555f;
+  color: #babfc3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}

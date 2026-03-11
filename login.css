@@ -1,0 +1,122 @@
+#view-login {
+  flex: 1;
+  min-height: calc(100vh - 120px);
+  background: #192b37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.public-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.public-shell .topbar {
+  border-bottom: 1px solid #47555f;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #30404b;
+  border-radius: 10px;
+  border: 1px solid #5e6a73;
+  padding: 28px;
+}
+
+.login-logo {
+  margin-bottom: 20px;
+}
+
+.login-logo-tight {
+  margin-bottom: 18px;
+}
+
+.endava-logo-login {
+  height: 32px;
+  width: auto;
+}
+
+.login-kicker-wrap {
+  margin-bottom: 14px;
+}
+
+.login-kicker {
+  color: #babfc3;
+  font-size: 12px;
+}
+
+.login-heading {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.login-sub {
+  color: #babfc3;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-label {
+  display: block;
+  color: #d1d5d7;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.form-input {
+  width: 100%;
+  border: 1px solid #758087;
+  border-radius: 6px;
+  background: #192b37;
+  color: #ffffff;
+  padding: 10px 12px;
+}
+
+.form-input::placeholder {
+  color: #8c959b;
+}
+
+.btn-primary {
+  width: 100%;
+  border: 1px solid #ff5640;
+  border-radius: 6px;
+  background: #ff5640;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 10px 12px;
+}
+
+.login-error {
+  margin-top: 12px;
+  border: 1px solid #d4403b;
+  border-radius: 6px;
+  background: #fceceb;
+  color: #d4403b;
+  font-size: 13px;
+  padding: 8px 10px;
+  display: none;
+}
+
+.login-error.show {
+  display: block;
+}
+
+.public-footer {
+  height: 60px;
+  background: #192b37;
+  border-top: 1px solid #47555f;
+  color: #babfc3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "userId": "U001",
+    "username": "sriram.relangi",
+    "password": "sriram123",
+    "role": "user",
+    "managerId": "M001",
+    "domain": "Engineering",
+    "displayName": "Sri Ram Relangi"
+  },
+  {
+    "userId": "U002",
+    "username": "nithin.dasam",
+    "password": "nithin123",
+    "role": "user",
+    "managerId": "M001",
+    "domain": "Engineering",
+    "displayName": "Nithin Dasam"
+  },
+  {
+    "userId": "U003",
+    "username": "dheeraj.perugu",
+    "password": "dheeraj123",
+    "role": "user",
+    "managerId": "M002",
+    "domain": "Design",
+    "displayName": "Dheeraj Perugu"
+  },
+  {
+    "userId": "U004",
+    "username": "hemanth.vundavalli",
+    "password": "hemanth123",
+    "role": "user",
+    "managerId": "M002",
+    "domain": "Design",
+    "displayName": "Hemanth Vundavalli"
+  },
+  {
+    "userId": "M001",
+    "username": "rajhans.kumar",
+    "password": "rajhans123",
+    "role": "manager",
+    "managerId": null,
+    "domain": "Engineering",
+    "displayName": "Rajhans Kumar"
+  },
+  {
+    "userId": "M002",
+    "username": "senthil.murugan",
+    "password": "senthil123",
+    "role": "manager",
+    "managerId": null,
+    "domain": "Design",
+    "displayName": "Senthil Murugan"
+  }
+]

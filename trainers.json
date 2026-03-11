@@ -1,0 +1,44 @@
+[
+  {
+    "trainerId": "T001",
+    "trainerName": "Kavyashree Chandranna",
+    "trainerExpertise": ["Agile & Scrum", "Project Management", "Leadership"],
+    "trainerAvailability": true,
+    "domain": "Engineering"
+  },
+  {
+    "trainerId": "T002",
+    "trainerName": "Ravindra Konatham",
+    "trainerExpertise": ["Cloud Architecture", "DevOps", "Kubernetes"],
+    "trainerAvailability": true,
+    "domain": "Engineering"
+  },
+  {
+    "trainerId": "T003",
+    "trainerName": "Chandu Kumar",
+    "trainerExpertise": ["UX Design", "Design Thinking", "Figma"],
+    "trainerAvailability": false,
+    "domain": "Design"
+  },
+  {
+    "trainerId": "T004",
+    "trainerName": "Mayur Pai",
+    "trainerExpertise": ["Data Visualization", "Brand Strategy", "Adobe Suite"],
+    "trainerAvailability": true,
+    "domain": "Design"
+  },
+  {
+    "trainerId": "T005",
+    "trainerName": "Layavardhan Burugula",
+    "trainerExpertise": ["Python", "Machine Learning", "Data Analysis"],
+    "trainerAvailability": true,
+    "domain": "Engineering"
+  },
+  {
+    "trainerId": "T006",
+    "trainerName": "Noel Leslie",
+    "trainerExpertise": ["Public Speaking", "Communication Skills", "Leadership"],
+    "trainerAvailability": false,
+    "domain": "Soft Skills"
+  }
+]

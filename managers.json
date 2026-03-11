@@ -1,0 +1,14 @@
+[
+  {
+    "managerId": "M001",
+    "managerName": "Rajhans Kumar",
+    "managerExpertise": ["Software Engineering", "Team Leadership", "Agile"],
+    "domain": "Engineering"
+  },
+  {
+    "managerId": "M002",
+    "managerName": "Senthil Murugan",
+    "managerExpertise": ["UI/UX Design", "Product Design", "Creative Direction"],
+    "domain": "Design"
+  }
+]

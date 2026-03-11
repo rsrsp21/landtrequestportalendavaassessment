@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L&T Training Request Portal - User Portal</title>
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/login.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body data-page="user">
+
+<div class="toast-container" id="toastContainer"></div>
+
+<div id="view-user" class="view active">
+  <div class="shell">
+    <nav class="topbar">
+      <div class="topbar-left">
+        <div class="topbar-logo">
+          <img src="assets/logo/endava_logo_neg_RGB.png" alt="Endava" class="endava-logo-topbar" />
+        </div>
+        <div class="topbar-divider"></div>
+        <span class="topbar-section">Training Portal</span>
+      </div>
+      <div class="topbar-right">
+        <div class="user-badge">
+          <div class="user-avatar" id="userAvatar">U</div>
+          <div class="user-info">
+            <span class="user-name" id="userDisplayName">User</span>
+            <span class="user-role">Employee</span>
+          </div>
+        </div>
+        <button class="btn-logout" onclick="logout()">Sign Out</button>
+      </div>
+    </nav>
+
+    <div class="main-content">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="switchUserTab('new', this)">New Request</button>
+        <button class="tab-btn" onclick="switchUserTab('history', this)">My Requests</button>
+      </div>
+
+      <div id="tab-new">
+        <div class="page-header">
+          <div class="breadcrumb"><span>Home</span><span class="breadcrumb-sep">&rsaquo;</span><span>Submit Training Request</span></div>
+          <h1>Training Request</h1>
+          <p>Complete the form below to submit a new learning and training request.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Request Details</div>
+              <div class="card-subtitle">All fields marked are required</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="form-grid">
+              <div>
+                <label class="field-label" for="trainingType">Type of Training</label>
+                <select class="field-select" id="trainingType">
+                  <option value="">Select training type...</option>
+                  <option>Soft Skills &amp; Leadership</option>
+                  <option>Agile &amp; Scrum</option>
+                  <option>Cloud &amp; DevOps</option>
+                  <option>Data &amp; Analytics</option>
+                  <option>Design &amp; UX</option>
+                  <option>Compliance &amp; Security</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="field-label" for="trainingTopic">Training Topic</label>
+                <input class="field-input" type="text" id="trainingTopic" placeholder="e.g. Kubernetes Advanced" />
+              </div>
+
+              <div>
+                <label class="field-label" for="expectedStartDate">Expected Start Date</label>
+                <input class="field-input" type="date" id="expectedStartDate" />
+              </div>
+
+              <div>
+                <label class="field-label" for="expectedEndDate">Expected End Date</label>
+                <input class="field-input" type="date" id="expectedEndDate" />
+              </div>
+
+              <div class="full">
+                <label class="field-label">Priority</label>
+                <div class="priority-group">
+                  <div class="priority-option">
+                    <input type="radio" name="priority" id="pLow" value="low" />
+                    <label for="pLow" class="p-low">Low</label>
+                  </div>
+                  <div class="priority-option">
+                    <input type="radio" name="priority" id="pMedium" value="medium" checked />
+                    <label for="pMedium" class="p-medium">Medium</label>
+                  </div>
+                  <div class="priority-option">
+                    <input type="radio" name="priority" id="pHigh" value="high" />
+                    <label for="pHigh" class="p-high">High</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="full">
+                <label class="field-label" for="trainingNotes">Additional Notes</label>
+                <textarea class="field-textarea" id="trainingNotes" placeholder="Describe your learning goals, context, or any specific requirements..."></textarea>
+              </div>
+            </div>
+
+            <div class="section-sep"></div>
+
+            <div class="card-title trainer-selection-title">Trainer Selection</div>
+            <p class="trainer-selection-subtitle">Select a preferred trainer. Availability is shown below.</p>
+            <div id="trainerList"></div>
+
+            <div class="form-actions">
+              <button class="btn-secondary" onclick="clearForm()">Clear</button>
+              <button class="btn-submit" onclick="submitRequest()">Submit Request</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-history" class="tab-panel-hidden">
+        <div class="page-header">
+          <h1>My Requests</h1>
+          <p>Track the status of your submitted training requests.</p>
+        </div>
+
+        <div class="stats-row" id="userStatsRow"></div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Submitted Requests</div>
+          </div>
+          <div class="table-scroll">
+            <table class="requests-table" id="userRequestsTable">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Training Type</th>
+                  <th>Topic</th>
+                  <th>Priority</th>
+                  <th>Expected Dates</th>
+                  <th>Trainer</th>
+                  <th>Status</th>
+                  <th>Submitted</th>
+                </tr>
+              </thead>
+              <tbody id="userRequestsBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="app-footer">
+      <p>(c) 2026 L&amp;T Training Portal</p>
+    </footer>
+  </div>
+</div>
+
+<script src="assets/js/state.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/user-portal.js"></script>
+<script src="assets/js/manager-portal.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

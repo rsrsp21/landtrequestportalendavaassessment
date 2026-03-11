@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L&T Training Request Portal - Admin Portal</title>
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/login.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body data-page="admin">
+
+<div class="toast-container" id="toastContainer"></div>
+
+<div class="modal-overlay" id="confirmModal">
+  <div class="modal">
+    <h3 id="modalTitle">Confirm Action</h3>
+    <p id="modalBody">Are you sure?</p>
+    <div class="modal-actions">
+      <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+      <button class="btn-submit" id="modalConfirmBtn" type="button">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<div id="view-manager" class="view active">
+  <div class="shell">
+    <nav class="topbar">
+      <div class="topbar-left">
+        <div class="topbar-logo">
+          <img src="assets/logo/endava_logo_neg_RGB.png" alt="Endava" class="endava-logo-topbar" />
+        </div>
+        <div class="topbar-divider"></div>
+        <span class="topbar-section">Manager Dashboard</span>
+      </div>
+      <div class="topbar-right">
+        <div class="user-badge">
+          <div class="user-avatar" id="mgrAvatar">M</div>
+          <div class="user-info">
+            <span class="user-name" id="mgrDisplayName">Manager</span>
+            <span class="user-role">Manager</span>
+          </div>
+        </div>
+        <button class="btn-logout" onclick="logout()">Sign Out</button>
+      </div>
+    </nav>
+
+    <div class="main-content">
+      <div class="page-header">
+        <div class="breadcrumb"><span>Dashboard</span><span class="breadcrumb-sep">&rsaquo;</span><span>Training Requests</span></div>
+        <h1>Training Requests</h1>
+        <p>Review, approve, or reject training requests from your team.</p>
+      </div>
+
+      <div class="stats-row" id="mgrStatsRow"></div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Team Requests</div>
+          <div class="filter-bar filter-bar-tight">
+            <select class="filter-select" id="mgrFilterStatus" onchange="renderManagerRequests()">
+              <option value="">All Statuses</option>
+              <option value="pending">Pending</option>
+              <option value="approved">Approved</option>
+              <option value="rejected">Rejected</option>
+            </select>
+            <select class="filter-select" id="mgrFilterPriority" onchange="renderManagerRequests()">
+              <option value="">All Priorities</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+        </div>
+        <div class="table-scroll">
+          <table class="requests-table" id="mgrRequestsTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Employee</th>
+                <th>Training Type</th>
+                <th>Topic</th>
+                <th>Priority</th>
+                <th>Dates</th>
+                <th>Trainer</th>
+                <th>Status</th>
+                <th>Submitted</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="mgrRequestsBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <footer class="app-footer">
+      <p>(c) 2026 L&amp;T Training Portal</p>
+    </footer>
+  </div>
+</div>
+
+<script src="assets/js/state.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/user-portal.js"></script>
+<script src="assets/js/manager-portal.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
